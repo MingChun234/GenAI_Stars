@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appcalorie.MainPage"
+              Shell.NavBarIsVisible="False">
+	
+    <Grid>
+        <Image Source="mainpage.png"
+           Aspect="AspectFill"
+           VerticalOptions="FillAndExpand"
+           HorizontalOptions="FillAndExpand">
+            <Image.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Up" Swiped="OnSwiped"/>
+            </Image.GestureRecognizers>
+        </Image>
+    </Grid>
+
+</ContentPage>

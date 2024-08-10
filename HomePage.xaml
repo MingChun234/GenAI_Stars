@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appcalorie.HomePage"
+             Title="NewPage1">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Frame BackgroundColor="LightGray"
+               CornerRadius="100"
+               WidthRequest="200"
+               HeightRequest="200"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               HasShadow="True"
+               BorderColor="Gray">
+            <Grid>
+                <GraphicsView x:Name="CaloriesChart" HeightRequest="200" WidthRequest="200"/>
+                <Label x:Name="TotalCalories" Text="1,286 kcal" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center" FontSize="24" FontAttributes="Bold"/>
+                <Label x:Name="TotalWeight" Text="1 kg" VerticalOptions="EndAndExpand" HeightRequest="70" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+            </Grid>
+        </Frame>
+
+        <TableView x:Name="DataTable" Intent="Data">
+            <TableRoot>
+                <TableSection x:Name="FoodItemsSection" Title="Food Items">
+                    <!-- Data will be populated here -->
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+        <ImageButton Source="camera_icon.png" HeightRequest="50" WidthRequest="50" Clicked="OnCameraButtonClicked" />
+    </StackLayout>
+</ContentPage>
